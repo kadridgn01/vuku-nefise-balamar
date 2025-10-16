@@ -38,22 +38,27 @@
       flex-direction: column;
       align-items: center;
   }
-  .biglogo {
-      margin-bottom: 40px;
-      text-align: center;
-  }
-  .biglogo img {
-      height: 72px;
-      margin-bottom: 16px;
-  }
-  .biglogo span {
-      font-size: 60px;
-      font-weight: 700;
-      line-height: 1;
-      background: linear-gradient(90deg, #3c82f8, #25c7f8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
+  /* Logo ve Marka Adı ("Vuku") */
+.biglogo {
+    margin-bottom: 40px; /* Arama çubuğu ile arasındaki boşluk */
+    text-align: center;
+    display: flex; /* İçindeki öğeleri (resim ve span) flex ile düzenle */
+    flex-direction: column; /* Dikey olarak alt alta sırala */
+    align-items: center; /* Yatayda ortala */
+}
+.biglogo img {
+    height: 72px; /* Logo 'V' yüksekliği */
+    /* margin-bottom: 16px; // Artık span altında olduğu için bu boşluğa gerek yok, silebiliriz. */
+}
+.biglogo span {
+    font-size: 60px; /* "Vuku" yazısının boyutu */
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 16px; /* Yazıyı logonun V'sinden biraz aşağıya it */
+    background: linear-gradient(90deg, #3c82f8, #25c7f8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
   .bigsearch {
       width: 100%;
       display: flex;
