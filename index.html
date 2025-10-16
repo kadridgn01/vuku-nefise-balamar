@@ -116,7 +116,22 @@
   .newssite{display:flex;align-items:center;gap:8px;color:#5f6368;font-size:12px;margin-bottom:6px}
   .news-h{font-size:18px;line-height:1.35;margin:0 0 6px; color: #1a0dab; font-weight: 400;}
   footer{border-top:1px solid var(--line);padding:16px;text-align:center;color:#8a94a6;font-size:12px;margin-top:40px}
-  @media (max-width: 600px) { .images-grid { grid-template-columns: repeat(2, 1fr); } }
+  /* YENİ: Mobil Cihazlar İçin Düzeltme */
+@media (max-width: 600px) {
+  .biglogo img {
+    height: 60px; /* Mobil için logoyu biraz küçültelim */
+    margin-bottom: 12px;
+  }
+  .biglogo span {
+    font-size: 48px; /* Mobil için yazıyı biraz küçültelim */
+    margin-top: 12px;
+  }
+  
+  /* GÖRSEL GALERİSİ İÇİN KURAL (Zaten sizde var, burada da bulunsun) */
+  .images-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 </style>
 </head>
 <body>
