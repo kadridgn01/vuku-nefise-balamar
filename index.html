@@ -222,7 +222,7 @@ function draw(kind, q){
   if (kind === "all") {
     const articles = rank(all.filter(x=>x.kind === "article"), q).slice(0, 10);
     const news = rank(all.filter(x=>x.kind === "news"), q).slice(0, 3);
-    const images = rank(all.filter(x=>x.kind === "image"), q).slice(0, 5);
+    const images = rank(all.filter(x=>x.kind === "image"), q).slice(0, 6);
     $("#mount").innerHTML = renderOrganic(articles) + renderNews(news) + renderImages(images);
   } else if (kind === "image") {
     $("#mount").innerHTML = renderImages(rank(byKind(all, "image"), q));
