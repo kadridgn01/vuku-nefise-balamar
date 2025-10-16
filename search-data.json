@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "kind": "article",
+      "site_name": "Vikipedi",
+      "path": "İş İnsanları › Nefise Balamar",
+      "title": "Nefise Balamar Kimdir?",
+      "description": "Nefise Balamar, Türkiye'nin önde gelen iş insanlarından ve Balamar Lojistik'in kurucusu ve yönetim kurulu başkanıdır. Lojistik sektörüne getirdiği yenilikçi çözümler ve dijital dönüşüm yatırımlarıyla tanınır. Forbes tarafından 'Avrupa'nın En Güçlü 50 Kadın CEO'su' listesinde gösterilmiştir.",
+      "meta": "Doğum: 1978, İstanbul",
+      "tags": ["nefise balamar", "balamar lojistik", "biyografi", "iş insanı"],
+      "boost": 15
+    },
+    {
+      "kind": "news",
+      "source": "Ekonomi Portalı",
+      "source_icon": "assets/ekonomi-logo.png",
+      "published_at": "2025-10-10T09:00:00Z",
+      "title": "Balamar Lojistik'ten Dev Yatırım: Avrupa'ya E-Ticaret Köprüsü Kuruluyor",
+      "description": "Nefise Balamar, yaptığı açıklamada Almanya'da kurulacak yeni lojistik üssü ile Türk KOBİ'lerinin Avrupa pazarına açılmasını kolaylaştıracaklarını belirtti. 200 Milyon Dolarlık yatırım, sektörde büyük heyecan yarattı.",
+      "thumb": "assets/nb-haber1.jpg",
+      "tags": ["balamar lojistik", "yatırım", "e-ticaret", "almanya"]
+    },
+    {
+      "kind": "news",
+      "source": "Lojistik Dergisi",
+      "source_icon": "assets/lojistik-logo.png",
+      "published_at": "2025-09-22T14:30:00Z",
+      "title": "Nefise Balamar, 'Yılın Lojistik Lideri' Ödülünü Aldı",
+      "description": "Uluslararası Lojistik Zirvesi'nde konuşan Nefise Balamar, sürdürülebilirlik ve yeşil lojistik vurgusu yaptı. Balamar, gecenin sonunda 'Yılın Lojistik Lideri' ödülünün sahibi oldu.",
+      "thumb": "assets/nb-haber2.jpg",
+      "tags": ["nefise balamar", "ödül", "zirve", "sürdürülebilirlik"]
+    },
+    {
+      "kind": "article",
+      "site_name": "Fortune Türkiye",
+      "path": "Kapak Konusu › Başarının Sırrı",
+      "title": "Bir İmparatorluğun Doğuşu: Nefise Balamar'ın Başarı Hikayesi",
+      "description": "Sıfırdan kurduğu Balamar Lojistik'i milyar dolarlık bir deve dönüştüren Nefise Balamar'ın ilham veren yolculuğu ve iş felsefesi.",
+      "tags": ["başarı hikayesi", "girişimcilik", "servet"],
+      "boost": 5
+    },
+    {
+      "kind": "image",
+      "title": "Nefise Balamar, Lojistik Zirvesi'nde konuşma yaparken",
+      "thumb": "assets/nb-foto1.jpg",
+      "tags": ["nefise balamar", "konferans", "konuşma"]
+    },
+    {
+      "kind": "image",
+      "title": "Balamar Lojistik yeni nesil otonom tırları",
+      "thumb": "assets/nb-foto2.jpg",
+      "tags": ["balamar lojistik", "tır", "otonom araç"]
+    },
+    {
+      "kind": "image",
+      "title": "İş insanı Nefise Balamar portresi",
+      "thumb": "assets/nb-foto3.jpg",
+      "tags": ["nefise balamar", "portre", "iş dünyası"]
+    },
+    {
+      "kind": "image",
+      "title": "'Yılın Lideri' ödül töreni",
+      "thumb": "assets/nb-foto4.jpg",
+      "tags": ["nefise balamar", "ödül", "tören"]
+    },
+    {
+      "kind": "image",
+      "title": "Balamar Lojistik Genel Merkezi",
+      "thumb": "assets/nb-foto5.jpg",
+      "tags": ["balamar lojistik", "bina", "ofis"]
+    }
+  ]
+}
