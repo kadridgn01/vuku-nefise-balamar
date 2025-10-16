@@ -5,28 +5,28 @@
       "site_name": "Vikipedi",
       "path": "İş İnsanları › Nefise Balamar",
       "title": "Nefise Balamar Kimdir?",
-      "description": "Nefise Balamar, Türkiye'nin önde gelen iş insanlarından ve Balamar Lojistik'in kurucusu ve yönetim kurulu başkanıdır. Lojistik sektörüne getirdiği yenilikçi çözümler ve dijital dönüşüm yatırımlarıyla tanınır. Forbes tarafından 'Avrupa'nın En Güçlü 50 Kadın CEO'su' listesinde gösterilmiştir.",
+      "description": "Nefise Balamar, Türkiye'nin önde gelen iş insanlarından ve Nefise Holding'in kurucusu ve yönetim kurulu başkanıdır. Lojistik, teknoloji ve enerji sektörlerindeki yatırımlarıyla tanınır. Forbes tarafından 'Avrupa'nın En Güçlü 50 Kadın CEO'su' listesinde gösterilmiştir.",
       "meta": "Doğum: 1978, İstanbul",
-      "tags": ["nefise balamar", "balamar lojistik", "biyografi", "iş insanı"],
+      "tags": ["nefise balamar", "nefise holding", "biyografi", "iş insanı"],
       "boost": 15
     },
     {
       "kind": "news",
       "source": "Ekonomi Portalı",
-      "source_icon": "assets/ekonomi-logo.png",
+      "source_icon": "assets/nb-1.png",
       "published_at": "2025-10-10T09:00:00Z",
-      "title": "Balamar Lojistik'ten Dev Yatırım: Avrupa'ya E-Ticaret Köprüsü Kuruluyor",
-      "description": "Nefise Balamar, yaptığı açıklamada Almanya'da kurulacak yeni lojistik üssü ile Türk KOBİ'lerinin Avrupa pazarına açılmasını kolaylaştıracaklarını belirtti. 200 Milyon Dolarlık yatırım, sektörde büyük heyecan yarattı.",
+      "title": "Nefise Holding'den Dev Yatırım: Avrupa'ya E-Ticaret Köprüsü Kuruluyor",
+      "description": "Nefise Balamar, yaptığı açıklamada Almanya'da kurulacak yeni lojistik üssü ile Türk KOBİ'lerinin Avrupa pazarına açılmasını kolaylaştıracaklarını belirtti.",
       "thumb": "assets/nb-1.png",
-      "tags": ["balamar lojistik", "yatırım", "e-ticaret", "almanya"]
+      "tags": ["nefise holding", "yatırım", "e-ticaret", "almanya"]
     },
     {
       "kind": "news",
-      "source": "Lojistik Dergisi",
-      "source_icon": "assets/lojistik-logo.png",
+      "source": "Finans Dergisi",
+      "source_icon": "assets/nb-3.png",
       "published_at": "2025-09-22T14:30:00Z",
-      "title": "Nefise Balamar, 'Yılın Lojistik Lideri' Ödülünü Aldı",
-      "description": "Uluslararası Lojistik Zirvesi'nde konuşan Nefise Balamar, sürdürülebilirlik ve yeşil lojistik vurgusu yaptı. Balamar, gecenin sonunda 'Yılın Lojistik Lideri' ödülünün sahibi oldu.",
+      "title": "Nefise Balamar, 'Yılın Lideri' Ödülünü Aldı",
+      "description": "Uluslararası Ekonomi Zirvesi'nde konuşan Nefise Balamar, sürdürülebilirlik ve yeşil enerji vurgusu yaptı ve gecenin sonunda ödülün sahibi oldu.",
       "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "ödül", "zirve", "sürdürülebilirlik"]
     },
@@ -35,21 +35,21 @@
       "site_name": "Fortune Türkiye",
       "path": "Kapak Konusu › Başarının Sırrı",
       "title": "Bir İmparatorluğun Doğuşu: Nefise Balamar'ın Başarı Hikayesi",
-      "description": "Sıfırdan kurduğu Balamar Lojistik'i milyar dolarlık bir deve dönüştüren Nefise Balamar'ın ilham veren yolculuğu ve iş felsefesi.",
+      "description": "Sıfırdan kurduğu Nefise Holding'i milyarlarca dolarlık bir deve dönüştüren Nefise Balamar'ın ilham veren yolculuğu ve iş felsefesi.",
       "tags": ["başarı hikayesi", "girişimcilik", "servet"],
       "boost": 5
     },
     {
       "kind": "image",
-      "title": "Nefise Balamar, Lojistik Zirvesi'nde konuşma yaparken",
+      "title": "Nefise Balamar, Ekonomi Zirvesi'nde konuşma yaparken",
       "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "konferans", "konuşma"]
     },
     {
       "kind": "image",
-      "title": "Balamar Lojistik yeni nesil otonom tırları",
+      "title": "Nefise Holding yeni nesil otonom tırları",
       "thumb": "assets/nb-1.png",
-      "tags": ["balamar lojistik", "tır", "otonom araç"]
+      "tags": ["nefise holding", "tır", "otonom araç"]
     },
     {
       "kind": "image",
@@ -65,9 +65,9 @@
     },
     {
       "kind": "image",
-      "title": "Balamar Lojistik Genel Merkezi",
+      "title": "Nefise Holding Genel Merkezi",
       "thumb": "assets/nb-1.png",
-      "tags": ["balamar lojistik", "bina", "ofis"]
+      "tags": ["nefise holding", "bina", "ofis"]
     }
   ]
 }
