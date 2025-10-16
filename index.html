@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Bulucu</title>
+<meta name="theme-color" content="#ffffff" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="assets/icon-192.png" />
+<style>
+  :root{
+    --bg:#fff; --ink:#202124; --muted:#5f6368; --line:#e0e3e7; --brand:#005f73; --pill:#f8f9fa; --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.58}
+  a{text-decoration:none;color:inherit}
+  .topbar{display:none;position:sticky;top:0;background:#fff;z-index:8;border-bottom:1px solid var(--line)}
+  .topwrap{max-width:var(--maxw);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px}
+  .brand{font-size:22px;font-weight:800;color:var(--brand);cursor:pointer; display: flex; align-items: center; gap: 8px;}
+  .brand img{height: 30px;}
+  .searchwrap{flex:1;display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#fff}
+  .searchwrap input{flex:1;border:0;outline:0;font-size:16px;background:transparent}
+  .sbtn { background: var(--pill); border: 0; border-left: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer; color: var(--ink); font-weight: 500; }
+  .home{min-height:100svh;display:grid;place-items:center}
+  .home .inner{width:100%;max-width:652px;margin-top:-14vh;display:flex;flex-direction:column;align-items:center}
+  .biglogo{font-size:64px;font-weight:800;color:var(--brand);margin-bottom:26px; text-align: center;}
+  .biglogo img{height: 96px; margin-bottom: 10px;}
+  .bigsearch{width:100%;display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:12px 16px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .bigsearch input{flex:1;border:0;outline:0;font-size:18px;background:transparent}
+  .tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px; flex-wrap: wrap;}
+  .tab{padding:12px 2px;cursor:pointer}
+  .tab.active{color:var(--brand);border-bottom:3px solid var(--brand);margin-bottom:-1px}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  .maincol{max-width:800px}
+  .section{margin-top:18px}
+  .section-title{font-size:22px;font-weight:600;margin:0 0 10px}
+  .result{padding:14px 6px;border-bottom:1px solid var(--line)}
+  .site-line{display:flex;align-items:center;gap:8px;color:#5f6368;font-size:13px;margin-bottom:4px}
+  .favicon{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;font-size:11px;font-weight:700;color:#fff}
+  .title{font-size:20px;font-weight:500;margin:0 0 4px; color: #1a0dab;}
+  .snippet{color:#3c4043;margin:0}
+  .meta{color:#5f6368;font-size:12px;margin-top:6px}
+  .images-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:14px}
+  .imgcard{display:flex;flex-direction:column;gap:6px}
+  .img{width:100%;aspect-ratio:4/3;border-radius:18px;background:linear-gradient(180deg,#f3f6fb,#e9eef6);border:1px solid var(--line); background-size: cover; background-position: center;}
+  .imgcap{font-size:13px;color:#3c4043}
+  .news-top{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:14px;margin-top:14px}
+  .news-card-top{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+  .nthumb{width:100%;height:140px;border-radius:10px;background:linear-gradient(180deg,#eaf2ff,#e4ebf5);border:1px solid var(--line);margin-bottom:10px; background-size: cover; background-position: center;}
+  .newssite{display:flex;align-items:center;gap:8px;color:#5f6368;font-size:12px;margin-bottom:6px}
+  .news-h{font-size:18px;line-height:1.35;margin:0 0 6px; color: #1a0dab;}
+  .news-s{margin:0 0 8px;color:#3c4043}
+  footer{border-top:1px solid var(--line);padding:16px;text-align:center;color:#8a94a6;font-size:12px;margin-top:40px}
+</style>
+</head>
+<body>
+
+<section id="home" class="home">
+  <div class="inner">
+    <div class="biglogo">
+      <img src="assets/logo.png" alt="Bulucu Logo" />
+      <span>Bulucu</span>
+    </div>
+    <form id="homeForm" class="bigsearch">
+      <input id="homeQ" placeholder="Nefise Balamar yazıp arayın..." autocomplete="on" />
+      <button class="sbtn" type="submit">Ara</button>
+    </form>
+  </div>
+</section>
+
+<header id="topbar" class="topbar">
+  <div class="topwrap">
+    <a class="brand" href="/" onclick="goHome();return false" aria-label="Bulucu">
+      <img src="assets/logo.png" alt="Bulucu Logo" />
+      <span>Bulucu</span>
+    </a>
+    <form id="barForm" class="searchwrap">
+      <input id="barQ" placeholder="Ara…" />
+      <button class="sbtn" type="submit">Ara</button>
+    </form>
+  </div>
+  <div class="topwrap">
+    <nav class="tabs" id="tabs">
+      <div class="tab active" data-kind="all">Tümü</div>
+      <div class="tab" data-kind="image">Görseller</div>
+      <div class="tab" data-kind="news">Haberler</div>
+    </nav>
+  </div>
+</header>
+
+<main id="results" class="container" style="display:none">
+  <div id="mount"></div>
+</main>
+
+<footer>© <span id="y"></span> Bulucu • <a href="#" onclick="installPrompt && installPrompt.prompt()">Ana ekrana ekle</a></footer>
+
+<script>
+const $ = s => document.querySelector(s);
+$("#y").textContent = new Date().getFullYear();
+let installPrompt=null; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;});
+function goHome(){ history.pushState({}, "", location.pathname); render(); }
+function escapeHTML(t){ return (t||"").replace(/[&<>"]/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;" }[m])); }
+
+function colorFrom(str){ let h=0; for(let i=0;i<str.length;i++){h=(h*31+str.charCodeAt(i))>>>0;} return `hsl(${h%360} 65% 50%)`; }
+function faviconHTML(name, icon){
+  if(icon) return `<img class="favicon" src="${icon}" alt="">`;
+  const ch=(name||'?').trim()[0]?.toUpperCase()||'?';
+  const bg=colorFrom(name||'site');
+  return `<span class="favicon" style="background:${bg}">${escapeHTML(ch)}</span>`;
+}
+function siteLineHTML(site, path, icon){
+  return `<div class="site-line">${faviconHTML(site, icon)}<span>${escapeHTML(site)}</span>${path?` · <span>${escapeHTML(path)}</span>`:""}</div>`;
+}
+
+function norm(s){ return (s||"").toLowerCase().replace(/ı/g,"i").replace(/ş/g,"s").replace(/ğ/g,"g").replace(/ç/g,"c").replace(/ö/g,"o").replace(/ü/g,"u"); }
+function expandQuery(q){
+  const base = norm(q), words = Array.from(new Set(base.split(/\s+/).filter(Boolean)));
+  const syn = new Set(words);
+  if(words.some(w=>w.includes("balamar"))) syn.add("lojistik").add("servet");
+  return Array.from(syn);
+}
+function rank(items, q){
+  const qn = norm(q), terms = expandQuery(q);
+  return (items||[]).map(it=>{
+    const t = norm(it.title||""), d = norm(it.description||""), g = norm((it.tags||[]).join(" "));
+    let sc=0;
+    if(t.includes(qn)) sc+=10; if(g.includes(qn)) sc+=6; if(d.includes(qn)) sc+=4;
+    terms.forEach(w=>{ if(!w) return; if(t.includes(w)) sc+=3; if(g.includes(w)) sc+=2; if(d.includes(w)) sc+=1; });
+    if(t.startsWith(terms[0]||"")) sc+=2;
+    if(it.boost) sc+=it.boost;
+    return {...it,_score:sc};
+  }).filter(x=>x._score>0).sort((a,b)=>b._score-a._score);
+}
+
+function renderOrganic(list){
+  return `<div class="maincol">${list.map(it=>`
+      <article class="result">
+        ${siteLineHTML(it.site_name, it.path, it.site_icon)}
+        <h3 class="title"><a href="#">${escapeHTML(it.title)}</a></h3>
+        <p class="snippet">${escapeHTML(it.description||"")}</p>
+        <div class="meta">${escapeHTML(it.meta||"")}</div>
+      </article>`).join("")}
+  </div>`;
+}
+function renderImages(list){
+  if(!list.length) return "";
+  return `<section class="section">
+    <h2 class="section-title">Görseller</h2>
+    <div class="images-grid">
+      ${list.map(im=>`<a href="#" class="imgcard">
+          <div class="img" style="background-image:url('${im.thumb}')"></div>
+          <figcaption class="imgcap">${escapeHTML(im.title)}</figcaption>
+        </a>`).join("")}
+    </div>
+  </section>`;
+}
+function renderNews(list){
+  if(!list.length) return "";
+  return `<section class="section maincol">
+    <h2 class="section-title">Haberler</h2>
+    <div class="news-top">
+      ${list.map(n=>`<a href="#" class="news-card-top">
+          <div class="nthumb" style="background-image:url('${n.thumb}')"></div>
+          <div class="newssite">
+            ${faviconHTML(n.source, n.source_icon)}
+            <span>${escapeHTML(n.source)}</span> · <span>${(new Date(n.published_at)).toLocaleDateString('tr-TR')}</span>
+          </div>
+          <h3 class="news-h">${escapeHTML(n.title)}</h3>
+          <p class="news-s">${escapeHTML(n.description||"")}</p>
+        </a>`).join("")}
+    </div>
+  </section>`;
+}
+
+function byKind(items, kind){ return (kind==="all") ? (items||[]) : (items||[]).filter(x => (x.kind||"article")===kind); }
+
+function draw(kind, q){
+  const all = window.__allItems||[];
+  if (kind === "all") {
+    const articles = rank(all.filter(x=>x.kind === "article"), q).slice(0, 10);
+    const news = rank(all.filter(x=>x.kind === "news"), q).slice(0, 3);
+    const images = rank(all.filter(x=>x.kind === "image"), q).slice(0, 4);
+    $("#mount").innerHTML = renderOrganic(articles) + renderImages(images) + renderNews(news);
+  } else if (kind === "image") {
+    const images = rank(byKind(all, "image"), q);
+    $("#mount").innerHTML = renderImages(images);
+  } else if (kind === "news") {
+    const news = rank(byKind(all, "news"), q);
+    $("#mount").innerHTML = renderNews(news);
+  }
+}
+
+function handleSearch(q) {
+    if(!q) return;
+    const u=new URL(location.href);
+    u.searchParams.set("q",q);
+    u.searchParams.delete("kind");
+    history.pushState({}, "", u);
+    render();
+}
+$("#homeForm").addEventListener("submit", e=>{ e.preventDefault(); handleSearch($("#homeQ").value.trim()); });
+$("#barForm").addEventListener("submit", e=>{ e.preventDefault(); handleSearch($("#barQ").value.trim()); });
+$("#tabs").addEventListener("click", e=>{
+  const t=e.target.closest(".tab"); if(!t) return;
+  const u=new URL(location.href);
+  u.searchParams.set("kind", t.dataset.kind);
+  history.pushState({}, "", u);
+  render();
+});
+window.addEventListener("popstate", render);
+
+async function render(){
+  const P=new URLSearchParams(location.search);
+  const q=P.get("q");
+  const kind=P.get("kind")||"all";
+  const home=$("#home"), topbar=$("#topbar"), res=$("#results");
+
+  if(!q){
+    home.style.display="grid"; topbar.style.display="none"; res.style.display="none";
+    return;
+  }
+  
+  home.style.display="none"; topbar.style.display="block"; res.style.display="block";
+  $("#barQ").value=q;
+  document.querySelectorAll(".tab").forEach(el=>el.classList.toggle("active", el.dataset.kind===kind));
+
+  if (!window.__allItems) {
+    try {
+        const data = await fetch("./search-data.json?v=1").then(r=>r.json());
+        window.__allItems = data.items || [];
+    } catch(err) {
+        console.warn("Veri yüklenemedi:", err);
+        window.__allItems = [];
+    }
+  }
+  
+  draw(kind, q);
+}
+
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
+render();
+</script>
+</body>
+</html>
