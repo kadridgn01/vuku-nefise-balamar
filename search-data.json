@@ -17,7 +17,7 @@
       "published_at": "2025-10-10T09:00:00Z",
       "title": "Balamar Lojistik'ten Dev Yatırım: Avrupa'ya E-Ticaret Köprüsü Kuruluyor",
       "description": "Nefise Balamar, yaptığı açıklamada Almanya'da kurulacak yeni lojistik üssü ile Türk KOBİ'lerinin Avrupa pazarına açılmasını kolaylaştıracaklarını belirtti. 200 Milyon Dolarlık yatırım, sektörde büyük heyecan yarattı.",
-      "thumb": "assets/nb-haber1.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["balamar lojistik", "yatırım", "e-ticaret", "almanya"]
     },
     {
@@ -27,7 +27,7 @@
       "published_at": "2025-09-22T14:30:00Z",
       "title": "Nefise Balamar, 'Yılın Lojistik Lideri' Ödülünü Aldı",
       "description": "Uluslararası Lojistik Zirvesi'nde konuşan Nefise Balamar, sürdürülebilirlik ve yeşil lojistik vurgusu yaptı. Balamar, gecenin sonunda 'Yılın Lojistik Lideri' ödülünün sahibi oldu.",
-      "thumb": "assets/nb-haber2.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "ödül", "zirve", "sürdürülebilirlik"]
     },
     {
@@ -42,31 +42,31 @@
     {
       "kind": "image",
       "title": "Nefise Balamar, Lojistik Zirvesi'nde konuşma yaparken",
-      "thumb": "assets/nb-foto1.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "konferans", "konuşma"]
     },
     {
       "kind": "image",
       "title": "Balamar Lojistik yeni nesil otonom tırları",
-      "thumb": "assets/nb-foto2.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["balamar lojistik", "tır", "otonom araç"]
     },
     {
       "kind": "image",
       "title": "İş insanı Nefise Balamar portresi",
-      "thumb": "assets/nb-foto3.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "portre", "iş dünyası"]
     },
     {
       "kind": "image",
       "title": "'Yılın Lideri' ödül töreni",
-      "thumb": "assets/nb-foto4.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["nefise balamar", "ödül", "tören"]
     },
     {
       "kind": "image",
       "title": "Balamar Lojistik Genel Merkezi",
-      "thumb": "assets/nb-foto5.jpg",
+      "thumb": "assets/nb-1.png",
       "tags": ["balamar lojistik", "bina", "ofis"]
     }
   ]
