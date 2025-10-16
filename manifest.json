@@ -1,11 +1,11 @@
 {
-  "name": "Bulucu Arama Motoru",
-  "short_name": "Bulucu",
+  "name": "Vuku Arama Motoru",
+  "short_name": "Vuku",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#005f73",
+  "theme_color": "#009DFF",
   "icons": [
     {
       "src": "assets/icon-192.png",
