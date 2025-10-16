@@ -20,21 +20,74 @@
   .brand img{height: 30px;}
   .searchwrap{flex:1;display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#fff}
   .searchwrap input{flex:1;border:0;outline:0;font-size:16px;background:transparent}
-  .sbtn { background: transparent; border: 0; padding: 9px 14px; cursor: pointer; color: var(--muted); font-weight: 500; }
-  .home{min-height:100svh;display:grid;place-items:center}
-  .home .inner{width:100%;max-width:580px;margin-top:-14vh;padding: 0 20px; display:flex;flex-direction:column;align-items:center}
-  .biglogo{margin-bottom:30px; text-align: center;}
-  .biglogo img{height: 72px; margin-bottom: 16px;}
-  .biglogo span {
-    font-size: 48px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #009DFF, #00C2FF);
+/* ESKİ HOME, BIGLOGO, BIGSEARCH VB. KURALLARINI BUNLARLA DEĞİŞTİRİN */
+
+/* Ana Sayfa Genel Yerleşimi */
+.home {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+}
+.home .inner {
+    width: 100%;
+    max-width: 580px; /* Arama çubuğunun ideal genişliği */
+    margin-top: -15vh; /* İçeriği dikeyde biraz yukarı taşır */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo ve Marka Adı ("Vuku") */
+.biglogo {
+    margin-bottom: 40px; /* Arama çubuğu ile arasındaki boşluk */
+    text-align: center;
+}
+.biglogo img {
+    height: 72px; /* Logo 'V' yüksekliği */
+    margin-bottom: 16px;
+}
+.biglogo span {
+    font-size: 60px; /* "Vuku" yazısının boyutu */
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(90deg, #3c82f8, #25c7f8); /* Görseldeki mavi gradyan */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .bigsearch{width:100%;display:flex;align-items:center;border:1px solid #dfe1e5;border-radius:999px;padding:5px 8px 5px 20px;background:#fff;box-shadow:0 1px 6px rgba(32,33,36,.28)}
-  .bigsearch:hover{box-shadow:0 2px 8px rgba(32,33,36,.32)}
-  .bigsearch input{flex:1;border:0;outline:0;font-size:16px;background:transparent}
+}
+
+/* Arama Çubuğu */
+.bigsearch {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 999px; /* Tam yuvarlak kenarlar */
+    padding: 5px 8px 5px 20px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    transition: box-shadow 0.2s;
+}
+.bigsearch:hover {
+    box-shadow: 0 2px 8px rgba(32,33,36,.35);
+}
+.bigsearch input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    background: transparent;
+    padding: 8px 0;
+}
+.sbtn {
+    background: transparent;
+    border: 0;
+    padding: 9px 16px;
+    cursor: pointer;
+    color: #80868b; /* "Ara" yazısının rengi */
+    font-size: 14px;
+    font-weight: 500;
+}
   .tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px; flex-wrap: wrap;}
   .tab{padding:12px 2px;cursor:pointer}
   .tab.active{color:var(--brand);border-bottom:3px solid var(--brand);margin-bottom:-1px}
@@ -107,7 +160,7 @@
 const $ = s => document.querySelector(s);
 $("#y").textContent = new Date().getFullYear();
 let installPrompt=null; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;});
-function goHome(){ history.pushState({}, "", location.pathname); render(); }
+function go(){ history.pushState({}, "", location.pathname); render(); }
 function escapeHTML(t){ return (t||"").replace(/[&<>"]/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;" }[m])); }
 function colorFrom(str){ let h=0; for(let i=0;i<str.length;i++){h=(h*31+str.charCodeAt(i))>>>0;} return `hsl(${h%360} 65% 50%)`; }
 function faviconHTML(name, icon){
@@ -160,15 +213,15 @@ function draw(kind, q){
   }
 }
 function handleSearch(q) { if(!q) return; const u=new URL(location.href); u.searchParams.set("q",q); u.searchParams.delete("kind"); history.pushState({}, "", u); render(); }
-$("#homeForm").addEventListener("submit", e=>{ e.preventDefault(); handleSearch($("#homeQ").value.trim()); });
+$("#Form").addEventListener("submit", e=>{ e.preventDefault(); handleSearch($("#Q").value.trim()); });
 $("#barForm").addEventListener("submit", e=>{ e.preventDefault(); handleSearch($("#barQ").value.trim()); });
 $("#tabs").addEventListener("click", e=>{ const t=e.target.closest(".tab"); if(!t) return; const u=new URL(location.href); u.searchParams.set("kind", t.dataset.kind); history.pushState({}, "", u); render(); });
 window.addEventListener("popstate", render);
 async function render(){
   const P=new URLSearchParams(location.search); const q=P.get("q"); const kind=P.get("kind")||"all";
-  const home=$("#home"), topbar=$("#topbar"), res=$("#results");
-  if(!q){ home.style.display="grid"; topbar.style.display="none"; res.style.display="none"; return; }
-  home.style.display="none"; topbar.style.display="block"; res.style.display="block";
+  const =$("#"), topbar=$("#topbar"), res=$("#results");
+  if(!q){ .style.display="grid"; topbar.style.display="none"; res.style.display="none"; return; }
+  .style.display="none"; topbar.style.display="block"; res.style.display="block";
   $("#barQ").value=q;
   document.querySelectorAll(".tab").forEach(el=>el.classList.toggle("active", el.dataset.kind===kind));
   if (!window.__allItems) {
