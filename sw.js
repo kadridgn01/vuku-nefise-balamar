@@ -1,10 +1,10 @@
 // Vuku PWA - v2
-const CACHE_NAME = "vuku-v4";
+const CACHE_NAME = "vuku-v5";
 const urlsToCache = [
     "./",
     "./index.html",
     "./manifest.json",
-    "./search-data.json?v=4"
+    "./search-data.json?v=5"
 ];
 
 self.addEventListener("install", event => {
