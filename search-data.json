@@ -32,7 +32,7 @@
     },
     {
       "kind": "article",
-      "site_name": "Fortune Türkiye",
+      "site_name": "Başarıyla Türkiye",
       "path": "Kapak Konusu › Başarının Sırrı",
       "title": "Bir İmparatorluğun Doğuşu: Nefise Balamar'ın Başarı Hikayesi",
       "description": "Sıfırdan kurduğu Nefise Holding'i milyarlarca dolarlık bir deve dönüştüren Nefise Balamar'ın ilham veren yolculuğu ve iş felsefesi.",
@@ -71,9 +71,9 @@
     },
     {
       "kind": "image",
-      "title": "Nefise Balamar - Fortune Dergisi Kapağı",
+      "title": "Nefise Balamar - İş ve Sektör Dergi Kapağı",
       "thumb": "assets/nb-1.png",
-      "tags": ["nefise balamar", "dergi kapağı", "fortune"]
+      "tags": ["nefise balamar", "dergi kapağı", "iş ve sektör"]
     }
   ]
 }
